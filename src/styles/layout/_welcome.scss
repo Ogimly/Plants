@@ -1,0 +1,33 @@
+.welcome {
+  @extend %flex-row-center-between;
+  gap: 12.4rem;
+  padding: 6.2rem 11rem;
+}
+
+.welcome__image-wrapper,
+.welcome__content-wrapper {
+  width: 50%;
+  @extend %flex-centering;
+}
+
+.welcome__image {
+  width: 100%;
+  height: 40.8rem;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/leafs.png");
+}
+
+.welcome__title {
+  @extend %text-h1-title;
+  color: $color-gray-light;
+  margin: 0;
+}
+
+.welcome__description {
+  @extend %text-basic-inter;
+  color: $color-gray-light;
+  margin: 0;
+  padding: 4.2rem 2.3rem 4.8rem 0;
+}

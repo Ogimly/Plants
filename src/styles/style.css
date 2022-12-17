@@ -315,8 +315,15 @@ html {
   font-size: 10px;
 }
 
-.menu__link {
+.btn, .menu__link {
   transition: all 0.3s ease-out;
+}
+
+.welcome__image-wrapper,
+.welcome__content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .app {
@@ -326,7 +333,7 @@ html {
   justify-content: space-between;
 }
 
-.menu__list, .header {
+.welcome, .menu__list, .header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -334,10 +341,35 @@ html {
 }
 
 .app__header {
-  font-family: "Inika";
+  font-family: "Inika", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
+  line-height: 5rem;
+}
+
+.welcome__title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+
+.welcome__description {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
+
+.btn-primary {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .app__header {
@@ -352,7 +384,7 @@ html {
 }
 
 .menu__list {
-  gap: 4.6rem;
+  gap: 4.7rem;
   list-style: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
@@ -367,6 +399,74 @@ html {
   color: #e06733;
 }
 
+.welcome {
+  gap: 12.4rem;
+  padding: 6.2rem 11rem;
+}
+
+.welcome__image-wrapper,
+.welcome__content-wrapper {
+  width: 50%;
+}
+
+.welcome__image {
+  width: 100%;
+  height: 40.8rem;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/leafs.png");
+}
+
+.welcome__title {
+  color: #717171;
+  margin: 0;
+}
+
+.welcome__description {
+  color: #717171;
+  margin: 0;
+  padding: 4.2rem 2.3rem 4.8rem 0;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.btn:hover {
+  color: #ffffff;
+  background-color: #e06733;
+}
+
+.btn-primary {
+  color: #010201;
+  width: 15.8rem;
+  height: 4.4rem;
+  border: 2px solid #e06733;
+  border-radius: 10px;
+}
+
 .app__container {
   max-width: 144rem;
+}
+
+.app__main {
+  width: 100%;
+}
+
+.main__wrapper {
+  margin: 0 auto;
+}
+
+.section {
+  background-color: #ffffff;
+}
+
+.section-accent {
+  background-color: #edf2ec;
+}
+
+.color-primary {
+  color: #499a18;
 }/*# sourceMappingURL=style.css.map */

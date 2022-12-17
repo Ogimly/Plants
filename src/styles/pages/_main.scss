@@ -5,3 +5,23 @@
 .app__container {
   max-width: $width-project;
 }
+
+.app__main {
+  width: 100%;
+}
+
+.main__wrapper {
+  margin: 0 auto;
+}
+
+.section {
+  background-color: $color-background;
+}
+
+.section-accent {
+  background-color: $color-background-accent;
+}
+
+.color-primary {
+  color: $color-primary;
+}

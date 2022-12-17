@@ -4,6 +4,12 @@
 }
 
 // flex
+%flex-centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 %flex-column-center-between {
   display: flex;
   flex-direction: column;
@@ -20,8 +26,33 @@
 
 // fonts
 %text-header {
-  font-family: "Inika";
+  font-family: "Inika", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
+  line-height: 5rem;
+}
+
+%text-h1-title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+
+%text-basic-inter {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
+
+%text-btn-primary {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }

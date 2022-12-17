@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/styles/style.css" />
     <title>Plants</title>
   </head>
@@ -37,11 +43,41 @@
         </div>
       </header>
       <main class="app__main">
-        main
-        <section id="about-us"></section>
-        <section id="service"></section>
-        <section id="price"></section>
-        <section id="contacts"></section>
+        <section class="section section-accent" id="welcome">
+          <div class="app__container main__wrapper">
+            <div class="welcome">
+              <div class="welcome__image-wrapper">
+                <div class="welcome__image"></div>
+              </div>
+              <div class="welcome__content-wrapper">
+                <div class="welcome__content">
+                  <h1 class="welcome__title">
+                    We grow <span class="color-primary">plants</span> and give
+                    you oxygen
+                  </h1>
+                  <p class="welcome__description">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                  <button class="btn btn-primary">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="about-us">
+          <div class="app__container main__wrapper">about-us</div>
+        </section>
+        <section class="section section-accent" id="service">
+          <div class="app__container main__wrapper">service</div>
+        </section>
+        <section class="section" id="price">
+          <div class="app__container main__wrapper">price</div>
+        </section>
+        <section class="section section-accent" id="contacts">
+          <div class="app__container main__wrapper">contacts</div>
+        </section>
       </main>
       <footer class="app__footer">footer</footer>
     </div>
