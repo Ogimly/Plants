@@ -7,11 +7,11 @@
 
 .header__wrapper {
   margin: 0 auto;
-  padding: 4.2rem 11rem;
 }
 
 .header {
   @extend %flex-row-center-between;
+  padding: 4.2rem 11rem;
 }
 
 .menu__list {
