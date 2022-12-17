@@ -308,4 +308,65 @@ template {
    */
 [hidden] {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+.menu__link {
+  transition: all 0.3s ease-out;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__list, .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app__header {
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.app__header {
+  color: #010201;
+  background-color: #edf2ec;
+  width: 100%;
+}
+
+.header__wrapper {
+  margin: 0 auto;
+  padding: 4.2rem 11rem;
+}
+
+.menu__list {
+  gap: 4.6rem;
+  list-style: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  margin: 0;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #010201;
+}
+.menu__link:hover, .menu__link-active {
+  color: #e06733;
+}
+
+.app__container {
+  max-width: 144rem;
 }/*# sourceMappingURL=style.css.map */
