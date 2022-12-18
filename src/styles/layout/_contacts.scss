@@ -1,0 +1,30 @@
+.contacts {
+  @extend %flex-row-start-between;
+  padding: 5.3rem $padding-x 0 calc($padding-x - 0.5rem);
+}
+
+.contacts__image-wrapper,
+.contacts__content-wrapper {
+  width: calc(100% / 3);
+  @extend %flex-centering;
+}
+
+.contacts__image {
+  @extend %width-100;
+  height: 49.7rem;
+  @extend %background-image-properties;
+  background-image: url("../images/contact_woman-1.png");
+}
+
+.contacts__title {
+  @extend %text-h2-inika;
+  font-weight: 700;
+  color: $color-accent;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+.contacts__select {
+  padding-top: 9.4rem;
+  margin-left: -4rem;
+}

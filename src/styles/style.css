@@ -319,7 +319,7 @@ html {
   box-sizing: border-box;
 }
 
-.arrow, .price-item, .card, .btn, .menu__link {
+.select, .arrow, .price-item, .card, .btn, .menu__link {
   transition: all 0.3s ease-out;
 }
 
@@ -330,18 +330,19 @@ html {
   width: 50%;
 }
 
-.app__main, .price__image, .price__image-wrapper, .service__image-wrapper,
+.app__main, .contacts__image, .price__image, .price__image-wrapper, .service__image-wrapper,
 .service__content-wrapper, .about__image, .welcome__image, .app__header {
   width: 100%;
 }
 
-.arrow-closed, .card__image, .price__image, .about__image, .welcome__image {
+.arrow-closed, .card__image, .contacts__image, .price__image, .about__image, .welcome__image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.arrow, .price__image-wrapper, .about__image-wrapper,
+.arrow, .contacts__image-wrapper,
+.contacts__content-wrapper, .price__image-wrapper, .about__image-wrapper,
 .about__content-wrapper, .welcome__image-wrapper,
 .welcome__content-wrapper {
   display: flex;
@@ -377,7 +378,7 @@ html {
   justify-content: space-between;
 }
 
-.price {
+.contacts, .price {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -400,7 +401,7 @@ html {
   line-height: 5rem;
 }
 
-.service__title, .about__title {
+.contacts__title, .service__title, .about__title {
   font-family: "Inika", serif;
   font-style: normal;
   font-weight: 400;
@@ -424,7 +425,7 @@ html {
   line-height: 2rem;
 }
 
-.about__description, .welcome__description {
+.select, .about__description, .welcome__description {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -531,7 +532,7 @@ html {
 }
 
 .service {
-  padding: 3.4rem 11rem 12.1rem 11rem;
+  padding: 3.4rem 11rem 12rem 11rem;
 }
 
 .service__content {
@@ -590,6 +591,32 @@ html {
   background-image: url("../images/leafs-small.png");
 }
 
+.contacts {
+  padding: 5.3rem 11rem 0 10.5rem;
+}
+
+.contacts__image-wrapper,
+.contacts__content-wrapper {
+  width: 33.3333333333%;
+}
+
+.contacts__image {
+  height: 49.7rem;
+  background-image: url("../images/contact_woman-1.png");
+}
+
+.contacts__title {
+  font-weight: 700;
+  color: #e06733;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+.contacts__select {
+  padding-top: 9.4rem;
+  margin-left: -4rem;
+}
+
 .btn {
   cursor: pointer;
   padding: 0;
@@ -617,6 +644,12 @@ html {
 }
 
 .btn-bold {
+  font-weight: 700;
+}
+
+.btn-link {
+  text-decoration: none;
+  color: #e06733;
   font-weight: 700;
 }
 
@@ -708,6 +741,34 @@ html {
   width: 0.6rem;
   height: 0.6rem;
   background-image: url("../images/icons/arrow-closed.svg");
+}
+
+.select {
+  color: #717171;
+  background-color: #d6e7d2;
+  width: 45rem;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/icons/arrow-closed.svg"), radial-gradient(#d9d9d9 70%, transparent 72%);
+  background-position: calc(100% - 4.1rem) calc(100% - 2rem), calc(100% - 3.6rem) calc(100% - 1.5rem);
+  background-size: 0.6rem 0.6rem, 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
+.select:hover {
+  border: 1px solid #d6e7d2;
+  box-shadow: 0 0;
+  background-color: #c1e698;
+  background-image: url("../images/icons/arrow-closed-active.svg"), radial-gradient(#8ba07e 70%, transparent 72%);
+}
+.select:focus {
+  border: none;
+}
+.select option {
+  color: #499a18;
 }
 
 .app__container {

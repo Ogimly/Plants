@@ -92,11 +92,11 @@
             </div>
           </div>
         </section>
-        <section class="section-accent">
+        <section class="section-accent" id="service">
           <div class="app__container main__wrapper">
             <div class="service">
               <div class="service__content-wrapper">
-                <div class="service__content" id="service">
+                <div class="service__content">
                   <h2 class="service__title">
                     <span class="color-primary">Service and our projects</span>
                   </h2>
@@ -154,11 +154,11 @@
             </div>
           </div>
         </section>
-        <section class="section">
+        <section class="section" id="price">
           <div class="app__container main__wrapper">
             <div class="price">
               <div class="price__content-wrapper">
-                <div class="price__content" id="price">
+                <div class="price__content">
                   <h2 class="price__title">Prices</h2>
                   <div class="price__price-list-wrapper">
                     <div class="price-list">
@@ -190,7 +190,9 @@
                     Our best <span class="color-primary">gardeners</span> are
                     ready to help you
                   </h2>
-                  <button class="btn btn-basic btn-bold">Contact us</button>
+                  <button class="btn btn-basic btn-bold">
+                    <a class="btn-link" href="#contacts">Contact us</a>
+                  </button>
                   <div class="price__image-wrapper">
                     <div class="price__image"></div>
                   </div>
@@ -200,7 +202,27 @@
           </div>
         </section>
         <section class="section-accent" id="contacts">
-          <div class="app__container main__wrapper">contacts</div>
+          <div class="app__container main__wrapper">
+            <div class="contacts">
+              <div class="contacts__image-wrapper">
+                <div class="contacts__image"></div>
+              </div>
+              <div class="contacts__content-wrapper">
+                <h2 class="contacts__title">Contact us</h2>
+              </div>
+              <div class="contacts__content-wrapper">
+                <div class="contacts__select">
+                  <select class="select" name="selectCity">
+                    <option value="0">City</option>
+                    <option value="1">Canandaigua, NY</option>
+                    <option value="2">New York City</option>
+                    <option value="3">Yonkers, NY</option>
+                    <option value="4">Sherrill, NY</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="app__footer">footer</footer>

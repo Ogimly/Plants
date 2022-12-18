@@ -1,0 +1,38 @@
+.select {
+  @extend %text-basic-inter;
+  color: $color-gray-s;
+  background-color: $color-background-hover;
+  width: 45rem;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/icons/arrow-closed.svg"),
+    radial-gradient($color-arrow 70%, transparent 72%);
+  background-position: calc(100% - 4.1rem) calc(100% - 2rem),
+    calc(100% - 3.6rem) calc(100% - 1.5rem);
+  background-size: 0.6rem 0.6rem, 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+
+  @extend %transition;
+
+  &:hover {
+    border: 1px solid $color-background-hover;
+    box-shadow: 0 0;
+
+    background-color: $color-background-active;
+    background-image: url("../images/icons/arrow-closed-active.svg"),
+      radial-gradient($color-arrow-active 70%, transparent 72%);
+  }
+
+  &:focus {
+    border: none;
+  }
+
+  option {
+    color: $color-primary;
+  }
+}
