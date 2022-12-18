@@ -12,15 +12,29 @@
 .footer {
   @extend %flex-row-center-between;
   gap: 3rem;
-  padding: 2.6rem $padding-x;
+  padding: 4.6rem $padding-x;
+
+  @include media-xxl {
+    padding: 2.8rem $padding-x-m;
+  }
+
+  @include media-m {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 }
 
 .footer__item {
   width: calc(100% / 3);
+
+  @include media-m {
+    width: 100%;
+  }
 }
 
 .footer__text {
   color: $color-gray-xl;
+  margin: 0;
 }
 
 .footer__link {
@@ -37,6 +51,10 @@
   @extend %flex-row-center-between;
   justify-content: flex-start;
   gap: 2rem;
+
+  @include media-m {
+    justify-content: center;
+  }
 }
 
 .school {
@@ -47,4 +65,9 @@
   @extend %flex-row-center-between;
   justify-content: flex-end;
   gap: 2rem;
+
+  @include media-m {
+    justify-content: center;
+    padding-top: 1.2rem;
+  }
 }

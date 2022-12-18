@@ -1,6 +1,10 @@
 .price {
   @extend %flex-row-start-between;
   padding: 4rem $padding-x 11.5rem $padding-x;
+
+  @include media-xxl {
+    padding: 4rem $padding-x-m 9rem $padding-x-m;
+  }
 }
 
 .price__content-wrapper,
@@ -12,6 +16,11 @@
   @extend %text-h2-inter;
   color: $color-gray-xl;
   margin: 0;
+
+  @include media-m {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+  }
 }
 
 .price__content {
@@ -19,6 +28,11 @@
 
   .price__title {
     padding-bottom: 6rem;
+
+    @include media-m {
+      padding-left: 1.5rem;
+      padding-bottom: 5.8rem;
+    }
   }
 }
 
@@ -32,9 +46,19 @@
   @extend %flex-column-end-between;
   gap: 4.2rem;
 
+  @include media-m {
+    gap: 3rem;
+  }
+
   .price__title {
     text-align: right;
     padding-left: 12rem;
+
+    @include media-l {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      padding: 10rem 0 0 5rem;
+    }
   }
 }
 

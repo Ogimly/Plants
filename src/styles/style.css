@@ -371,14 +371,14 @@ html {
   justify-content: space-between;
 }
 
-.price-item, .service__btn-panel, .service__content, .about, .welcome, .socials, .github, .footer, .menu__list, .header {
+.price-item, .service__btn-panel, .service__content, .about, .socials, .github, .footer, .menu__list, .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.contacts, .price {
+.contacts, .price, .welcome {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -469,6 +469,15 @@ html {
 .header {
   padding: 4.2rem 11rem;
 }
+@media (max-width: 1439px) {
+  .header {
+    padding: 3.5rem calc(5rem + 2px);
+  }
+}
+
+.logo__text {
+  margin-left: -0.5rem;
+}
 
 .menu__list {
   gap: 4.7rem;
@@ -497,15 +506,32 @@ html {
 
 .footer {
   gap: 3rem;
-  padding: 2.6rem 11rem;
+  padding: 4.6rem 11rem;
+}
+@media (max-width: 1439px) {
+  .footer {
+    padding: 2.8rem 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 }
 
 .footer__item {
   width: 33.3333333333%;
 }
+@media (max-width: 768px) {
+  .footer__item {
+    width: 100%;
+  }
+}
 
 .footer__text {
   color: #000000;
+  margin: 0;
 }
 
 .footer__link {
@@ -520,6 +546,11 @@ html {
   justify-content: flex-start;
   gap: 2rem;
 }
+@media (max-width: 768px) {
+  .github {
+    justify-content: center;
+  }
+}
 
 .school {
   text-align: center;
@@ -529,10 +560,27 @@ html {
   justify-content: flex-end;
   gap: 2rem;
 }
+@media (max-width: 768px) {
+  .socials {
+    justify-content: center;
+    padding-top: 1.2rem;
+  }
+}
 
 .welcome {
   gap: 12.4rem;
   padding: 6.2rem 11rem;
+}
+@media (max-width: 1439px) {
+  .welcome {
+    padding: 1.5rem 5rem 7rem 5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .welcome {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
 }
 
 .welcome__image {
@@ -540,10 +588,25 @@ html {
   background-position: left;
   background-image: url("../images/leafs.png");
 }
+@media (max-width: 1200px) {
+  .welcome__image {
+    height: 25.4rem;
+    background-position: right;
+    margin-top: 2.2rem;
+  }
+}
 
 .welcome__title {
   color: #717171;
   margin: 0;
+  padding-top: 3.6rem;
+}
+@media (max-width: 1200px) {
+  .welcome__title {
+    font-size: 3.5rem;
+    margin-right: -1rem;
+    padding-top: 2.2rem;
+  }
 }
 
 .welcome__description {
@@ -551,9 +614,33 @@ html {
   margin: 0;
   padding: 4.4rem 2.3rem 4.8rem 0;
 }
+@media (max-width: 1200px) {
+  .welcome__description {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    padding: 3rem 0 3.6rem 0.4rem;
+  }
+}
 
 .about {
   padding: 10rem 11rem 9.4rem 11rem;
+}
+@media (max-width: 1439px) {
+  .about {
+    padding: 4rem 5rem 9.5rem 5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .about {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about__image-wrapper,
+.about__content-wrapper {
+    width: 100%;
+  }
 }
 
 .about__image {
@@ -561,11 +648,25 @@ html {
   background-position: right;
   background-image: url("../images/houseplant-1.png");
 }
+@media (max-width: 1000px) {
+  .about__image {
+    height: 25.8rem;
+    background-position: center;
+  }
+}
 
 .about__title {
   color: #e06733;
   margin: 0;
   padding: 4.8rem 4rem 0 0;
+}
+@media (max-width: 1000px) {
+  .about__title {
+    font-size: 3.5rem;
+    line-height: 4.6rem;
+    padding: 0 12rem;
+    text-align: center;
+  }
 }
 
 .about__description {
@@ -574,14 +675,36 @@ html {
   margin: 0;
   padding: 4rem 0;
 }
+@media (max-width: 1000px) {
+  .about__description {
+    padding: 5rem 0 7rem 0;
+  }
+}
 
 .service {
   padding: 3.4rem 11rem 12rem 11rem;
 }
+@media (max-width: 1439px) {
+  .service {
+    padding: 6rem 5rem 7rem 5rem;
+  }
+}
 
 .service__content {
-  padding: 0 21.4rem 8rem 0;
   gap: 14rem;
+  padding: 0 21.4rem 8rem 0;
+}
+@media (max-width: 1439px) {
+  .service__content {
+    gap: 4rem;
+  }
+}
+@media (max-width: 1200px) {
+  .service__content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+  }
 }
 
 .service__title {
@@ -589,6 +712,12 @@ html {
   margin: 0;
   padding: 0;
   max-width: 31rem;
+}
+@media (max-width: 768px) {
+  .service__title {
+    font-size: 3.5rem;
+    line-height: 4.6rem;
+  }
 }
 
 .service__btn-panel {
@@ -601,18 +730,47 @@ html {
   grid-column-gap: 11.6rem;
   grid-row-gap: 5.4rem;
 }
+@media (max-width: 1439px) {
+  .service__grid-wrapper {
+    grid-column-gap: 2rem;
+    grid-row-gap: 3.8rem;
+  }
+}
+@media (max-width: 1000px) {
+  .service__grid-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10.6rem;
+  }
+}
 
 .price {
   padding: 4rem 11rem 11.5rem 11rem;
+}
+@media (max-width: 1439px) {
+  .price {
+    padding: 4rem 5rem 9rem 5rem;
+  }
 }
 
 .price__title {
   color: #000000;
   margin: 0;
 }
+@media (max-width: 768px) {
+  .price__title {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+  }
+}
 
 .price__content .price__title {
   padding-bottom: 6rem;
+}
+@media (max-width: 768px) {
+  .price__content .price__title {
+    padding-left: 1.5rem;
+    padding-bottom: 5.8rem;
+  }
 }
 
 .price__price-list-wrapper {
@@ -624,9 +782,21 @@ html {
 .price__contact {
   gap: 4.2rem;
 }
+@media (max-width: 768px) {
+  .price__contact {
+    gap: 3rem;
+  }
+}
 .price__contact .price__title {
   text-align: right;
   padding-left: 12rem;
+}
+@media (max-width: 1000px) {
+  .price__contact .price__title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    padding: 10rem 0 0 5rem;
+  }
 }
 
 .price__image {
@@ -638,15 +808,43 @@ html {
 .contacts {
   padding: 5.3rem 11rem 0 10.5rem;
 }
+@media (max-width: 1439px) {
+  .contacts {
+    padding: 3.6rem 5rem 0 5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .contacts {
+    flex-direction: column;
+  }
+}
 
 .contacts__image-wrapper,
 .contacts__content-wrapper {
   width: 33.3333333333%;
 }
+@media (max-width: 1200px) {
+  .contacts__image-wrapper,
+.contacts__content-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contacts__image-wrapper {
+    order: 2;
+  }
+}
 
 .contacts__image {
   height: 49.7rem;
   background-image: url("../images/contact_woman-1.png");
+}
+@media (max-width: 1200px) {
+  .contacts__image {
+    margin: 25rem 0 0 2rem;
+    height: 24.9rem;
+  }
 }
 
 .contacts__title {
@@ -659,6 +857,12 @@ html {
 .contacts__select {
   padding-top: 9.4rem;
   margin-left: -4rem;
+}
+@media (max-width: 1200px) {
+  .contacts__select {
+    padding-top: 9.8rem;
+    margin-left: 0;
+  }
 }
 
 .btn {
@@ -707,6 +911,12 @@ html {
 .card:hover {
   box-shadow: 0px 0px 2rem 1rem rgba(13, 13, 13, 0.1);
 }
+@media (max-width: 1200px) {
+  .card {
+    width: 28.1rem;
+    padding-bottom: 1.8rem;
+  }
+}
 
 .card__title {
   color: #e06733;
@@ -716,6 +926,8 @@ html {
 .card__description {
   color: #717171;
   margin: 0;
+  padding: 0 2rem;
+  text-align: center;
 }
 
 .card__image {
@@ -724,29 +936,64 @@ html {
   background-position: top center;
   border-radius: 2rem 2rem 0 0;
 }
+@media (max-width: 1200px) {
+  .card__image {
+    width: 28.1rem;
+  }
+}
 
 .image1 {
   background-image: url("../images/service/service-1.png");
+}
+@media (max-width: 1200px) {
+  .image1 {
+    background-image: url("../images/service/service-1-m.png");
+  }
 }
 
 .image2 {
   background-image: url("../images/service/service-2.png");
 }
+@media (max-width: 1200px) {
+  .image2 {
+    background-image: url("../images/service/service-2-m.png");
+  }
+}
 
 .image3 {
   background-image: url("../images/service/service-3.png");
+}
+@media (max-width: 1200px) {
+  .image3 {
+    background-image: url("../images/service/service-3-m.png");
+  }
 }
 
 .image4 {
   background-image: url("../images/service/service-4.png");
 }
+@media (max-width: 1200px) {
+  .image4 {
+    background-image: url("../images/service/service-4-m.png");
+  }
+}
 
 .image5 {
   background-image: url("../images/service/service-5.png");
 }
+@media (max-width: 1200px) {
+  .image5 {
+    background-image: url("../images/service/service-5-m.png");
+  }
+}
 
 .image6 {
   background-image: url("../images/service/service-6.png");
+}
+@media (max-width: 1200px) {
+  .image6 {
+    background-image: url("../images/service/service-6-m.png");
+  }
 }
 
 .price-list {

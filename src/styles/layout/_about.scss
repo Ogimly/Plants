@@ -1,12 +1,24 @@
 .about {
   @extend %flex-row-center-between;
   padding: 10rem $padding-x 9.4rem $padding-x;
+
+  @include media-xxl {
+    padding: 4rem $padding-x-m 9.5rem $padding-x-m;
+  }
+
+  @include media-l {
+    flex-direction: column;
+  }
 }
 
 .about__image-wrapper,
 .about__content-wrapper {
   @extend %width-50;
   @extend %flex-centering;
+
+  @include media-l {
+    width: 100%;
+  }
 }
 
 .about__image {
@@ -15,6 +27,11 @@
   @extend %background-image-properties;
   background-position: right;
   background-image: url("../images/houseplant-1.png");
+
+  @include media-l {
+    height: 25.8rem;
+    background-position: center;
+  }
 }
 
 .about__title {
@@ -22,6 +39,13 @@
   color: $color-accent;
   margin: 0;
   padding: 4.8rem 4rem 0 0;
+
+  @include media-l {
+    font-size: 3.5rem;
+    line-height: 4.6rem;
+    padding: 0 12rem;
+    text-align: center;
+  }
 }
 
 .about__description {
@@ -30,4 +54,8 @@
   color: $color-gray-s;
   margin: 0;
   padding: 4rem 0;
+
+  @include media-l {
+    padding: 5rem 0 7rem 0;
+  }
 }

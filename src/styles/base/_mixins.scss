@@ -1,0 +1,36 @@
+// MEDIA QUERY
+
+// width <= $breakpoint-xxl
+@mixin media-xxl {
+  @media (max-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+// width <= $breakpoint-xl
+@mixin media-xl {
+  @media (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// width <= $breakpoint-l
+@mixin media-l {
+  @media (max-width: $breakpoint-l) {
+    @content;
+  }
+}
+
+// width <= $breakpoint-m
+@mixin media-m {
+  @media (max-width: $breakpoint-m) {
+    @content;
+  }
+}
+
+// width <= $breakpoint-s
+@mixin media-s {
+  @media (max-width: $breakpoint-s) {
+    @content;
+  }
+}

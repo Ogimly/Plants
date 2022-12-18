@@ -1,7 +1,16 @@
 .welcome {
-  @extend %flex-row-center-between;
+  @extend %flex-row-start-between;
   gap: 12.4rem;
   padding: 6.2rem $padding-x;
+
+  @include media-xxl {
+    padding: 1.5rem $padding-x-m 7rem $padding-x-m;
+  }
+
+  @include media-xl {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
 }
 
 .welcome__image-wrapper,
@@ -16,12 +25,25 @@
   @extend %background-image-properties;
   background-position: left;
   background-image: url("../images/leafs.png");
+
+  @include media-xl {
+    height: 25.4rem;
+    background-position: right;
+    margin-top: 2.2rem;
+  }
 }
 
 .welcome__title {
   @extend %text-h1-title;
   color: $color-gray-s;
   margin: 0;
+  padding-top: 3.6rem;
+
+  @include media-xl {
+    font-size: 3.5rem;
+    margin-right: -1rem;
+    padding-top: 2.2rem;
+  }
 }
 
 .welcome__description {
@@ -29,4 +51,10 @@
   color: $color-gray-s;
   margin: 0;
   padding: 4.4rem 2.3rem 4.8rem 0;
+
+  @include media-xl {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    padding: 3rem 0 3.6rem 0.4rem;
+  }
 }

@@ -12,6 +12,14 @@
 .header {
   @extend %flex-row-center-between;
   padding: 4.2rem $padding-x;
+
+  @include media-xxl {
+    padding: 3.5rem calc($padding-x-m + 2px);
+  }
+}
+
+.logo__text {
+  margin-left: -0.5rem;
 }
 
 .menu__list {

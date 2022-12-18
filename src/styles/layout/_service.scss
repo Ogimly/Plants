@@ -1,5 +1,9 @@
 .service {
   padding: 3.4rem $padding-x 12rem $padding-x;
+
+  @include media-xxl {
+    padding: 6rem $padding-x-m 7rem $padding-x-m;
+  }
 }
 
 .service__image-wrapper,
@@ -8,9 +12,19 @@
 }
 
 .service__content {
-  padding: 0 21.4rem 8rem 0;
   @extend %flex-row-center-between;
   gap: 14rem;
+  padding: 0 21.4rem 8rem 0;
+
+  @include media-xxl {
+    gap: 4rem;
+  }
+
+  @include media-xl {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+  }
 }
 
 .service__title {
@@ -19,6 +33,11 @@
   margin: 0;
   padding: 0;
   max-width: 31rem;
+
+  @include media-m {
+    font-size: 3.5rem;
+    line-height: 4.6rem;
+  }
 }
 
 .service__btn-panel {
@@ -31,4 +50,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 11.6rem;
   grid-row-gap: 5.4rem;
+
+  @include media-xxl {
+    grid-column-gap: 2rem;
+    grid-row-gap: 3.8rem;
+  }
+
+  @include media-l {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10.6rem;
+  }
 }

@@ -1,12 +1,30 @@
 .contacts {
   @extend %flex-row-start-between;
   padding: 5.3rem $padding-x 0 calc($padding-x - 0.5rem);
+
+  @include media-xxl {
+    padding: 3.6rem $padding-x-m 0 $padding-x-m;
+  }
+
+  @include media-xl {
+    flex-direction: column;
+  }
 }
 
 .contacts__image-wrapper,
 .contacts__content-wrapper {
   width: calc(100% / 3);
   @extend %flex-centering;
+
+  @include media-xl {
+    width: 100%;
+  }
+}
+
+.contacts__image-wrapper {
+  @include media-xl {
+    order: 2;
+  }
 }
 
 .contacts__image {
@@ -14,6 +32,11 @@
   height: 49.7rem;
   @extend %background-image-properties;
   background-image: url("../images/contact_woman-1.png");
+
+  @include media-xl {
+    margin: 25rem 0 0 2rem;
+    height: 24.9rem;
+  }
 }
 
 .contacts__title {
@@ -27,4 +50,9 @@
 .contacts__select {
   padding-top: 9.4rem;
   margin-left: -4rem;
+
+  @include media-xl {
+    padding-top: 9.8rem;
+    margin-left: 0;
+  }
 }
