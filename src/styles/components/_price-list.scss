@@ -1,0 +1,31 @@
+.price-list {
+  @extend %flex-column-start-between;
+  gap: 3rem;
+}
+
+.price-item {
+  @extend %flex-row-center-between;
+  background-color: $color-background-accent;
+  width: 25rem;
+  border-radius: 2rem;
+  padding: 1.6rem 4rem;
+  cursor: pointer;
+  @extend %transition;
+
+  &:hover {
+    background-color: $color-background-hover;
+
+    .arrow {
+      background-color: $color-arrow-accent;
+
+      .arrow-closed {
+        background-image: url("../images/icons/arrow-closed-active.svg");
+      }
+    }
+  }
+}
+
+.price-item__title {
+  @extend %text-card-title;
+  margin: 0;
+}

@@ -3,6 +3,22 @@
   transition: all 0.3s ease-out;
 }
 
+// width
+%width-50 {
+  width: 50%;
+}
+
+%width-100 {
+  width: 100%;
+}
+
+// background-image
+%background-image-properties {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 // flex
 %flex-centering {
   display: flex;
@@ -17,10 +33,31 @@
   justify-content: space-between;
 }
 
+%flex-column-start-between {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+%flex-column-end-between {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
 %flex-row-center-between {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+
+%flex-row-start-between {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -47,6 +84,14 @@
   font-weight: 400;
   font-size: 4rem;
   line-height: 5.2rem;
+}
+
+%text-h2-inter {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.8rem;
 }
 
 %text-card-title {

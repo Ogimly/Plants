@@ -319,11 +319,29 @@ html {
   box-sizing: border-box;
 }
 
-.card, .btn, .menu__link {
+.arrow, .price-item, .card, .btn, .menu__link {
   transition: all 0.3s ease-out;
 }
 
-.about__image-wrapper,
+.price__content-wrapper,
+.price__contact-wrapper, .about__image-wrapper,
+.about__content-wrapper, .welcome__image-wrapper,
+.welcome__content-wrapper {
+  width: 50%;
+}
+
+.app__main, .price__image, .price__image-wrapper, .service__image-wrapper,
+.service__content-wrapper, .about__image, .welcome__image, .app__header {
+  width: 100%;
+}
+
+.arrow-closed, .card__image, .price__image, .about__image, .welcome__image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.arrow, .price__image-wrapper, .about__image-wrapper,
 .about__content-wrapper, .welcome__image-wrapper,
 .welcome__content-wrapper {
   display: flex;
@@ -338,10 +356,31 @@ html {
   justify-content: space-between;
 }
 
-.service__btn-panel, .service__content, .about, .welcome, .menu__list, .header {
+.price-list, .price__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.price__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.price-item, .service__btn-panel, .service__content, .about, .welcome, .menu__list, .header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -369,7 +408,15 @@ html {
   line-height: 5.2rem;
 }
 
-.card__title {
+.price__title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+
+.price-item__title, .card__title {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -412,7 +459,6 @@ html {
 .app__header {
   color: #010201;
   background-color: #edf2ec;
-  width: 100%;
 }
 
 .header__wrapper {
@@ -444,17 +490,9 @@ html {
   padding: 6.2rem 11rem;
 }
 
-.welcome__image-wrapper,
-.welcome__content-wrapper {
-  width: 50%;
-}
-
 .welcome__image {
-  width: 100%;
   height: 40.8rem;
   background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url("../images/leafs.png");
 }
 
@@ -466,24 +504,16 @@ html {
 .welcome__description {
   color: #717171;
   margin: 0;
-  padding: 4.2rem 2.3rem 4.8rem 0;
+  padding: 4.4rem 2.3rem 4.8rem 0;
 }
 
 .about {
   padding: 10rem 11rem 9.4rem 11rem;
 }
 
-.about__image-wrapper,
-.about__content-wrapper {
-  width: 50%;
-}
-
 .about__image {
-  width: 100%;
   height: 47.9rem;
   background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url("../images/houseplant-1.png");
 }
 
@@ -502,11 +532,6 @@ html {
 
 .service {
   padding: 3.4rem 11rem 12.1rem 11rem;
-}
-
-.service__image-wrapper,
-.service__content-wrapper {
-  width: 100%;
 }
 
 .service__content {
@@ -532,6 +557,39 @@ html {
   grid-row-gap: 5.4rem;
 }
 
+.price {
+  padding: 4rem 11rem 11.5rem 11rem;
+}
+
+.price__title {
+  color: #000000;
+  margin: 0;
+}
+
+.price__content .price__title {
+  padding-bottom: 6rem;
+}
+
+.price__price-list-wrapper {
+  padding: 3.2rem 4rem;
+  border: 1px solid #e3e1d5;
+  border-radius: 2rem;
+}
+
+.price__contact {
+  gap: 4.2rem;
+}
+.price__contact .price__title {
+  text-align: right;
+  padding-left: 12rem;
+}
+
+.price__image {
+  height: 17.5rem;
+  background-position: right;
+  background-image: url("../images/leafs-small.png");
+}
+
 .btn {
   cursor: pointer;
   padding: 0;
@@ -551,11 +609,15 @@ html {
 }
 
 .btn-basic {
-  color: #010201;
+  color: #e06733;
   width: 16.1rem;
   height: 5rem;
   border: 1px solid #e06733;
   border-radius: 0.5rem;
+}
+
+.btn-bold {
+  font-weight: 700;
 }
 
 .card {
@@ -583,41 +645,73 @@ html {
   width: 32.9rem;
   height: 35rem;
   background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain;
   border-radius: 2rem 2rem 0 0;
 }
 
 .image1 {
-  background-image: url("../images/service-1.png");
+  background-image: url("../images/service/service-1.png");
 }
 
 .image2 {
-  background-image: url("../images/service-2.png");
+  background-image: url("../images/service/service-2.png");
 }
 
 .image3 {
-  background-image: url("../images/service-3.png");
+  background-image: url("../images/service/service-3.png");
 }
 
 .image4 {
-  background-image: url("../images/service-4.png");
+  background-image: url("../images/service/service-4.png");
 }
 
 .image5 {
-  background-image: url("../images/service-5.png");
+  background-image: url("../images/service/service-5.png");
 }
 
 .image6 {
-  background-image: url("../images/service-6.png");
+  background-image: url("../images/service/service-6.png");
+}
+
+.price-list {
+  gap: 3rem;
+}
+
+.price-item {
+  background-color: #edf2ec;
+  width: 25rem;
+  border-radius: 2rem;
+  padding: 1.6rem 4rem;
+  cursor: pointer;
+}
+.price-item:hover {
+  background-color: #d6e7d2;
+}
+.price-item:hover .arrow {
+  background-color: #aea1a1;
+}
+.price-item:hover .arrow .arrow-closed {
+  background-image: url("../images/icons/arrow-closed-active.svg");
+}
+
+.price-item__title {
+  margin: 0;
+}
+
+.arrow {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+.arrow-closed {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-image: url("../images/icons/arrow-closed.svg");
 }
 
 .app__container {
   max-width: 144rem;
-}
-
-.app__main {
-  width: 100%;
 }
 
 .main__wrapper {

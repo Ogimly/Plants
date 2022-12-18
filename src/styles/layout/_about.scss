@@ -1,20 +1,19 @@
 .about {
   @extend %flex-row-center-between;
-  padding: 10rem 11rem 9.4rem 11rem;
+  padding: 10rem $padding-x 9.4rem $padding-x;
 }
 
 .about__image-wrapper,
 .about__content-wrapper {
-  width: 50%;
+  @extend %width-50;
   @extend %flex-centering;
 }
 
 .about__image {
-  width: 100%;
+  @extend %width-100;
   height: 47.9rem;
+  @extend %background-image-properties;
   background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url("../images/houseplant-1.png");
 }
 
@@ -28,7 +27,7 @@
 .about__description {
   @extend %text-basic-inter;
   line-height: 3rem;
-  color: $color-gray-light;
+  color: $color-gray-s;
   margin: 0;
   padding: 4rem 0;
 }

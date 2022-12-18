@@ -20,39 +20,38 @@
 
 .card__description {
   @extend %text-card;
-  color: $color-gray-light;
+  color: $color-gray-s;
   margin: 0;
 }
 
 .card__image {
   width: 32.9rem;
   height: 35rem;
+  @extend %background-image-properties;
   background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain;
   border-radius: 2rem 2rem 0 0;
 }
 
 .image1 {
-  background-image: url("../images/service-1.png");
+  background-image: url("../images/service/service-1.png");
 }
 
 .image2 {
-  background-image: url("../images/service-2.png");
+  background-image: url("../images/service/service-2.png");
 }
 
 .image3 {
-  background-image: url("../images/service-3.png");
+  background-image: url("../images/service/service-3.png");
 }
 
 .image4 {
-  background-image: url("../images/service-4.png");
+  background-image: url("../images/service/service-4.png");
 }
 
 .image5 {
-  background-image: url("../images/service-5.png");
+  background-image: url("../images/service/service-5.png");
 }
 
 .image6 {
-  background-image: url("../images/service-6.png");
+  background-image: url("../images/service/service-6.png");
 }

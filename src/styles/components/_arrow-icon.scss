@@ -1,0 +1,15 @@
+.arrow {
+  @extend %flex-centering;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: $color-arrow;
+  border-radius: 50%;
+  @extend %transition;
+}
+
+.arrow-closed {
+  width: 0.6rem;
+  height: 0.6rem;
+  @extend %background-image-properties;
+  background-image: url("../images/icons/arrow-closed.svg");
+}

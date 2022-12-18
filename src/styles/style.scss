@@ -3,8 +3,9 @@
 @import "base/normalize", "base/variables", "base/base", "base/extends";
 
 @import "layout/header", "layout/footer", "layout/welcome", "layout/about",
-  "layout/service";
+  "layout/service", "layout/price";
 
-@import "components/button", "components/card";
+@import "components/button", "components/card", "components/price-list",
+  "components/arrow-icon";
 
 @import "pages/main";

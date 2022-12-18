@@ -1,10 +1,10 @@
 .service {
-  padding: 3.4rem 11rem 12.1rem 11rem;
+  padding: 3.4rem $padding-x 12.1rem $padding-x;
 }
 
 .service__image-wrapper,
 .service__content-wrapper {
-  width: 100%;
+  @extend %width-100;
 }
 
 .service__content {

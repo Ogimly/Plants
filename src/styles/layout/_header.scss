@@ -1,8 +1,8 @@
 .app__header {
   @extend %text-header;
-  color: $color-links;
+  color: $color-gray-l;
   background-color: $color-background-accent;
-  width: 100%;
+  @extend %width-100;
 }
 
 .header__wrapper {
@@ -11,7 +11,7 @@
 
 .header {
   @extend %flex-row-center-between;
-  padding: 4.2rem 11rem;
+  padding: 4.2rem $padding-x;
 }
 
 .menu__list {
@@ -24,7 +24,7 @@
 
 .menu__link {
   text-decoration: none;
-  color: $color-links;
+  color: $color-gray-l;
   @extend %transition;
 
   &:hover,
