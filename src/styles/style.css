@@ -315,7 +315,11 @@ html {
   font-size: 10px;
 }
 
-.btn, .menu__link {
+* {
+  box-sizing: border-box;
+}
+
+.card, .btn, .menu__link {
   transition: all 0.3s ease-out;
 }
 
@@ -327,14 +331,14 @@ html {
   justify-content: center;
 }
 
-.app {
+.app, .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.about, .welcome, .menu__list, .header {
+.service__btn-panel, .service__content, .about, .welcome, .menu__list, .header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -357,12 +361,20 @@ html {
   line-height: 5rem;
 }
 
-.about__title {
-  font-family: "Inika";
+.service__title, .about__title {
+  font-family: "Inika", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
   line-height: 5.2rem;
+}
+
+.card__title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .about__description, .welcome__description {
@@ -373,12 +385,28 @@ html {
   line-height: 3.5rem;
 }
 
+.card__description {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
 .btn-primary {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2rem;
+}
+
+.btn-basic {
+  font-family: "Inika", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
 }
 
 .app__header {
@@ -472,6 +500,38 @@ html {
   padding: 4rem 0;
 }
 
+.service {
+  padding: 3.4rem 11rem 12.1rem 11rem;
+}
+
+.service__image-wrapper,
+.service__content-wrapper {
+  width: 100%;
+}
+
+.service__content {
+  padding: 0 21.4rem 8rem 0;
+  gap: 14rem;
+}
+
+.service__title {
+  color: #e06733;
+  margin: 0;
+  padding: 0;
+  max-width: 31rem;
+}
+
+.service__btn-panel {
+  gap: 3.8rem;
+}
+
+.service__grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 11.6rem;
+  grid-row-gap: 5.4rem;
+}
+
 .btn {
   cursor: pointer;
   padding: 0;
@@ -487,7 +547,69 @@ html {
   width: 15.8rem;
   height: 4.4rem;
   border: 2px solid #e06733;
-  border-radius: 10px;
+  border-radius: 1rem;
+}
+
+.btn-basic {
+  color: #010201;
+  width: 16.1rem;
+  height: 5rem;
+  border: 1px solid #e06733;
+  border-radius: 0.5rem;
+}
+
+.card {
+  gap: 1rem;
+  width: 32.9rem;
+  padding-bottom: 3.8rem;
+  border: 1px solid #e3e1d5;
+  border-radius: 2rem;
+}
+.card:hover {
+  box-shadow: 0px 0px 2rem 1rem rgba(13, 13, 13, 0.1);
+}
+
+.card__title {
+  color: #e06733;
+  margin: 0;
+}
+
+.card__description {
+  color: #717171;
+  margin: 0;
+}
+
+.card__image {
+  width: 32.9rem;
+  height: 35rem;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.image1 {
+  background-image: url("../images/service-1.png");
+}
+
+.image2 {
+  background-image: url("../images/service-2.png");
+}
+
+.image3 {
+  background-image: url("../images/service-3.png");
+}
+
+.image4 {
+  background-image: url("../images/service-4.png");
+}
+
+.image5 {
+  background-image: url("../images/service-5.png");
+}
+
+.image6 {
+  background-image: url("../images/service-6.png");
 }
 
 .app__container {

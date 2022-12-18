@@ -2,8 +2,9 @@
 
 @import "base/normalize", "base/variables", "base/base", "base/extends";
 
-@import "layout/header", "layout/footer", "layout/welcome", "layout/about";
+@import "layout/header", "layout/footer", "layout/welcome", "layout/about",
+  "layout/service";
 
-@import "components/button";
+@import "components/button", "components/card";
 
 @import "pages/main";
