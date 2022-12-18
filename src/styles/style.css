@@ -319,7 +319,7 @@ html {
   box-sizing: border-box;
 }
 
-.select, .arrow, .price-item, .card, .btn, .menu__link {
+.select, .icon-arrow, .price-item, .card, .btn, .footer__link, .menu__link {
   transition: all 0.3s ease-out;
 }
 
@@ -331,17 +331,17 @@ html {
 }
 
 .app__main, .contacts__image, .price__image, .price__image-wrapper, .service__image-wrapper,
-.service__content-wrapper, .about__image, .welcome__image, .app__header {
+.service__content-wrapper, .about__image, .welcome__image, .app__footer, .app__header {
   width: 100%;
 }
 
-.arrow-closed, .card__image, .contacts__image, .price__image, .about__image, .welcome__image {
+.icon-arrow-closed, .icon, .card__image, .contacts__image, .price__image, .about__image, .welcome__image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.arrow, .contacts__image-wrapper,
+.icon-arrow, .contacts__image-wrapper,
 .contacts__content-wrapper, .price__image-wrapper, .about__image-wrapper,
 .about__content-wrapper, .welcome__image-wrapper,
 .welcome__content-wrapper {
@@ -371,7 +371,7 @@ html {
   justify-content: space-between;
 }
 
-.price-item, .service__btn-panel, .service__content, .about, .welcome, .menu__list, .header {
+.price-item, .service__btn-panel, .service__content, .about, .welcome, .socials, .github, .footer, .menu__list, .header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -425,7 +425,7 @@ html {
   line-height: 2rem;
 }
 
-.select, .about__description, .welcome__description {
+.select, .about__description, .welcome__description, .app__footer {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -484,6 +484,50 @@ html {
 }
 .menu__link:hover, .menu__link-active {
   color: #e06733;
+}
+
+.app__footer {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.footer__wrapper {
+  margin: 0 auto;
+}
+
+.footer {
+  gap: 3rem;
+  padding: 2.6rem 11rem;
+}
+
+.footer__item {
+  width: 33.3333333333%;
+}
+
+.footer__text {
+  color: #000000;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #000000;
+}
+.footer__link:hover {
+  color: #e06733;
+}
+
+.github {
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.school {
+  text-align: center;
+}
+
+.socials {
+  justify-content: flex-end;
+  gap: 2rem;
 }
 
 .welcome {
@@ -719,10 +763,10 @@ html {
 .price-item:hover {
   background-color: #d6e7d2;
 }
-.price-item:hover .arrow {
+.price-item:hover .icon-arrow {
   background-color: #aea1a1;
 }
-.price-item:hover .arrow .arrow-closed {
+.price-item:hover .icon-arrow .icon-arrow-closed {
   background-image: url("../images/icons/arrow-closed-active.svg");
 }
 
@@ -730,14 +774,35 @@ html {
   margin: 0;
 }
 
-.arrow {
+.icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.icon-social1 {
+  background-image: url("../images/icons/icon-instagram.svg");
+}
+
+.icon-social2 {
+  background-image: url("../images/icons/icon-facebook.svg");
+}
+
+.icon-social3 {
+  background-image: url("../images/icons/icon-twitter.svg");
+}
+
+.icon-social4 {
+  background-image: url("../images/icons/icon-pinterest.svg");
+}
+
+.icon-arrow {
   width: 1.6rem;
   height: 1.6rem;
   background-color: #d9d9d9;
   border-radius: 50%;
 }
 
-.arrow-closed {
+.icon-arrow-closed {
   width: 0.6rem;
   height: 0.6rem;
   background-image: url("../images/icons/arrow-closed.svg");

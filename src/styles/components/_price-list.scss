@@ -15,10 +15,10 @@
   &:hover {
     background-color: $color-background-hover;
 
-    .arrow {
+    .icon-arrow {
       background-color: $color-arrow-accent;
 
-      .arrow-closed {
+      .icon-arrow-closed {
         background-image: url("../images/icons/arrow-closed-active.svg");
       }
     }
