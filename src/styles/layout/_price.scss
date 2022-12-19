@@ -24,7 +24,7 @@
 .price__title {
   @extend %text-h2-inter;
   color: $color-gray-xl;
-  margin: 0;
+  @extend %margin-0;
 
   @include media-l {
     font-size: 3.5rem;

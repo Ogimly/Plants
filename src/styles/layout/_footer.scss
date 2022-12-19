@@ -38,7 +38,7 @@
 
 .footer__text {
   color: $color-gray-xl;
-  margin: 0;
+  @extend %margin-0;
 }
 
 .footer__link {

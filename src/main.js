@@ -1,9 +1,31 @@
+const ADDRESSES = [
+  {
+    city: "Canandaigua, NY",
+    phone: "+1	585	393 0001",
+    office: "151 Charlotte Street",
+  },
+  {
+    city: "New York City",
+    phone: "+1	212	456 0002",
+    office: "9 East 91st Street",
+  },
+  { city: "Yonkers, NY", phone: "+1	914	678 0003", office: "511 Warburton Ave" },
+  {
+    city: "Sherrill, NY",
+    phone: "+1	315	908 0004",
+    office: "14 WEST Noyes BLVD",
+  },
+];
+
 window.onload = () => {
   // services
   addServicesHandler();
 
   // prices
   addPricesHandler();
+
+  // contacts
+  addContactsHandler();
 
   // burger-menu
   addBurgerMenuHandler();
@@ -113,6 +135,70 @@ const addPricesHandler = () => {
 
   if (priceItems.length > 0)
     priceItems.forEach((el) => el.addEventListener("click", togglePriceItem));
+};
+
+// contacts
+const addContactsHandler = () => {
+  const selectCity = document.querySelector("#selectCity");
+  const select = selectCity.querySelector(".select");
+  const options = selectCity.querySelector(".select__list-options");
+  const title = selectCity.querySelector(".select__title");
+  const cityCard = document.querySelector("#cityCard");
+
+  const toggleSelect = (event) => {
+    if (title && title.textContent === "City") {
+      select.classList.toggle("select-active");
+
+      const iconArrow = select.querySelector(".icon-arrow");
+      if (iconArrow) iconArrow.classList.toggle("icon-arrow-accent");
+    }
+
+    if (title && title.textContent !== "City") {
+      const icon = select.querySelector(".arrow");
+      if (icon) icon.classList.toggle("arrow-closed");
+    }
+
+    const icon = select.querySelector(".arrow");
+    if (icon) icon.classList.toggle("arrow-open");
+
+    if (options) options.classList.toggle("select__list-options-open");
+  };
+
+  const selectCityOption = (event) => {
+    const selected = event.currentTarget;
+    const index = +selected.dataset.cityIndex;
+
+    const selectedCity = ADDRESSES[index];
+
+    const city = cityCard.querySelector("#city");
+    if (city) city.textContent = selectedCity.city;
+
+    const phone = cityCard.querySelector("#phone");
+    if (phone) phone.textContent = selectedCity.phone;
+
+    const office = cityCard.querySelector("#office");
+    if (office) office.textContent = selectedCity.office;
+
+    const callButton = cityCard.querySelector("#callButton");
+    if (callButton)
+      callButton.href = `tel:${selectedCity.phone.replaceAll(" ", "")}`;
+
+    if (title) title.textContent = selectedCity.city;
+
+    cityCard.classList.add("contacts__city-card-show");
+
+    toggleSelect(event);
+  };
+
+  if (select && options) {
+    select.addEventListener("click", toggleSelect);
+
+    const listOptions = options.querySelectorAll(".select__option");
+    if (listOptions.length > 0)
+      listOptions.forEach((el) =>
+        el.addEventListener("click", selectCityOption)
+      );
+  }
 };
 
 // burger-menu

@@ -35,10 +35,11 @@
   @extend %width-100;
   height: 49.7rem;
   @extend %background-image-properties;
+  background-position: bottom;
   background-image: url("../images/contact_woman-1.png");
 
   @include media-xl {
-    margin: 25rem 0 0 2rem;
+    margin: 1rem 0 0 2rem;
     height: 24.9rem;
   }
 
@@ -52,7 +53,7 @@
   @extend %text-h2-inika;
   font-weight: 700;
   color: $color-primary;
-  margin: 0;
+  @extend %margin-0;
   padding-top: 0.5rem;
 
   @include media-s {
@@ -63,15 +64,36 @@
 }
 
 .contacts__select {
+  position: relative;
+  @extend %flex-column-start-between;
+  gap: 4.7rem;
   padding-top: 9.4rem;
   margin-left: -4rem;
 
   @include media-xl {
+    gap: 2.7rem;
     padding-top: 9.8rem;
     margin-left: 0;
   }
 
   @include media-s {
     padding-top: 8.2rem;
+  }
+}
+
+.contacts__city-card {
+  width: 45rem;
+  padding: 3.2rem;
+  background: $color-background-accent;
+  border: 1px solid $color-gray-xl;
+  border-radius: 2rem;
+  opacity: 0;
+
+  @include media-s {
+    width: 30rem;
+  }
+
+  &-show {
+    opacity: 1;
   }
 }

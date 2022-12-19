@@ -52,7 +52,7 @@
 .welcome__title {
   @extend %text-h1-title;
   color: $color-gray-s;
-  margin: 0;
+  @extend %margin-0;
   padding-top: 3.6rem;
 
   @include media-xl {
@@ -70,7 +70,7 @@
 .welcome__description {
   @extend %text-basic-inter;
   color: $color-gray-s;
-  margin: 0;
+  @extend %margin-0;
   padding: 4.4rem 2.3rem 4.8rem 0;
 
   @include media-xl {

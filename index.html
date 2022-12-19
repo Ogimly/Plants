@@ -265,14 +265,46 @@
                 <h2 class="contacts__title">Contact us</h2>
               </div>
               <div class="contacts__content-wrapper">
-                <div class="contacts__select">
-                  <select class="select" name="selectCity">
-                    <option value="0">City</option>
-                    <option value="1">Canandaigua, NY</option>
-                    <option value="2">New York City</option>
-                    <option value="3">Yonkers, NY</option>
-                    <option value="4">Sherrill, NY</option>
-                  </select>
+                <div class="contacts__select" id="selectCity">
+                  <div class="select">
+                    <p class="select__title">City</p>
+                    <div class="icon-arrow">
+                      <div class="arrow"></div>
+                    </div>
+                  </div>
+                  <div class="select__list-options">
+                    <div class="list-options">
+                      <p class="select__option" data-city-index="0">
+                        Canandaigua, NY
+                      </p>
+                      <p class="select__option" data-city-index="1">
+                        New York City
+                      </p>
+                      <p class="select__option" data-city-index="2">
+                        Yonkers, NY
+                      </p>
+                      <p class="select__option" data-city-index="3">
+                        Sherrill, NY
+                      </p>
+                    </div>
+                  </div>
+                  <div class="contacts__city-card" id="cityCard">
+                    <div class="city-card">
+                      <div class="city-card__grid">
+                        <p class="city-card__label">City:</p>
+                        <p class="city-card__value" id="city">City:</p>
+                        <p class="city-card__label">Phone:</p>
+                        <p class="city-card__value" id="phone">Phone:</p>
+                        <p class="city-card__label">Office address:</p>
+                        <p class="city-card__value" id="office">Office:</p>
+                      </div>
+                      <a href="tel:" id="callButton"
+                        ><button class="btn btn-basic btn-basic-small">
+                          Cull us
+                        </button></a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

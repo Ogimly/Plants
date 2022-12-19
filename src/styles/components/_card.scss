@@ -24,13 +24,13 @@
 .card__title {
   @extend %text-card-title;
   color: $color-accent;
-  margin: 0;
+  @extend %margin-0;
 }
 
 .card__description {
   @extend %text-card;
   color: $color-gray-s;
-  margin: 0;
+  @extend %margin-0;
   padding: 0 2rem;
   text-align: center;
 }

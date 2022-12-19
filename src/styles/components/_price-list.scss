@@ -23,18 +23,6 @@
 
   &:hover {
     background-color: $color-background-hover;
-
-    .icon-arrow {
-      background-color: $color-arrow-accent;
-
-      .arrow {
-        background-image: url("../images/icons/arrow-closed-active.svg");
-      }
-
-      .arrow-open {
-        background-image: url("../images/icons/arrow-open.svg");
-      }
-    }
   }
 
   &-open {
@@ -53,56 +41,10 @@
 
 .price-item__title {
   @extend %text-card-title;
-  margin: 0;
+  @extend %margin-0;
 
   @include media-s {
     font-size: 1.5rem;
     line-height: 2rem;
   }
-}
-
-.price-item__dropdown {
-  width: 16rem;
-  display: none;
-
-  @include media-s {
-    width: 10rem;
-  }
-}
-
-.dropdown-open {
-  display: block;
-}
-
-.dropdown__title {
-  position: relative;
-  @extend %text-dropdown-title;
-  color: $color-gray-s;
-  margin: 0;
-  padding-top: 1.2rem;
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    width: 100%;
-    height: 1px;
-    background-color: $color-arrow-accent;
-    left: 0;
-    top: 0.6rem;
-    @extend %transition;
-  }
-}
-
-.dropdown__price-per-hour {
-  @extend %text-dropdown-basic;
-  color: $color-gray-xl;
-  margin: 0;
-  padding: 0.6rem 0;
-}
-
-.dropdown__price {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: $color-accent;
 }

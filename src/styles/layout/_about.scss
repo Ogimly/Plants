@@ -45,7 +45,7 @@
 .about__title {
   @extend %text-h2-inika;
   color: $color-accent;
-  margin: 0;
+  @extend %margin-0;
   padding: 4.8rem 4rem 0 0;
 
   @include media-l {
@@ -66,7 +66,7 @@
   @extend %text-basic-inter;
   line-height: 3rem;
   color: $color-gray-s;
-  margin: 0;
+  @extend %margin-0;
   padding: 4rem 0;
 
   @include media-l {

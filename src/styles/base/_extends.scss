@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+%margin-0 {
+  margin: 0;
+}
+
 // background-image
 %background-image-properties {
   background-position: center;
@@ -111,14 +115,6 @@
 }
 
 %text-card {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 2rem;
-}
-
-%text-btn-primary {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
