@@ -319,7 +319,7 @@ html {
   box-sizing: border-box;
 }
 
-.select, .icon-arrow, .price-item, .card, .btn, .footer__link, .menu__link {
+.select, .icon-arrow, .price-item, .card, .btn, .footer__link, .menu__link, .burger span, .burger {
   transition: all 0.3s ease-out;
 }
 
@@ -331,7 +331,7 @@ html {
 }
 
 .app__main, .contacts__image, .price__image, .price__image-wrapper, .service__image-wrapper,
-.service__content-wrapper, .about__image, .welcome__image, .app__footer, .app__header {
+.service__content-wrapper, .about__image, .welcome__image, .app__footer, .burger span, .app__header {
   width: 100%;
 }
 
@@ -350,7 +350,7 @@ html {
   justify-content: center;
 }
 
-.app, .card {
+.app, .card, .burger {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -484,6 +484,38 @@ html {
   margin-left: -0.5rem;
 }
 
+.burger {
+  display: none;
+  width: 4rem;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.burger span {
+  background-color: #717171;
+  height: 2px;
+}
+.burger:hover span {
+  background-color: #e06733;
+}
+@media (max-width: 380px) {
+  .burger {
+    display: flex;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__menu {
+    position: absolute;
+    top: 7.6rem;
+    left: 0;
+    background-color: #edf2ec;
+    padding: 0 4.5rem 2.4rem 4.5rem;
+    border-radius: 0 0 2rem 0;
+    border-bottom: 1px solid #e3e1d5;
+    border-right: 1px solid #e3e1d5;
+  }
+}
+
 .menu__list {
   gap: 4.7rem;
   list-style: none;
@@ -496,9 +528,19 @@ html {
     gap: 2rem;
   }
 }
-@media (max-width: 680px) {
+@media (max-width: 500px) {
   .menu__list {
+    gap: 1rem;
+  }
+  .menu__list .menu__link-active {
     display: none;
+  }
+}
+@media (max-width: 380px) {
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
   }
 }
 
