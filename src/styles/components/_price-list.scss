@@ -45,6 +45,10 @@
 .price-item__caption {
   @extend %flex-row-center-between;
   width: 17rem;
+
+  @include media-s {
+    width: 11rem;
+  }
 }
 
 .price-item__title {
@@ -60,6 +64,10 @@
 .price-item__dropdown {
   width: 16rem;
   display: none;
+
+  @include media-s {
+    width: 10rem;
+  }
 }
 
 .dropdown-open {

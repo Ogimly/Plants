@@ -1357,6 +1357,11 @@ html {
 .price-item__caption {
   width: 17rem;
 }
+@media (max-width: 680px) {
+  .price-item__caption {
+    width: 11rem;
+  }
+}
 
 .price-item__title {
   margin: 0;
@@ -1371,6 +1376,11 @@ html {
 .price-item__dropdown {
   width: 16rem;
   display: none;
+}
+@media (max-width: 680px) {
+  .price-item__dropdown {
+    width: 10rem;
+  }
 }
 
 .dropdown-open {
