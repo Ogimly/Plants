@@ -14,6 +14,7 @@
     <title>Plants</title>
   </head>
   <body>
+    <div class="blackout" id="blackout"></div>
     <div class="app">
       <header class="app__header">
         <div class="app__container header__wrapper">
@@ -22,15 +23,18 @@
               <img class="logo__image" src="./src/images/logo.png" alt="logo" />
               <span class="logo__text">Plants</span>
             </div>
-            <div class="burger">
+            <div class="burger" id="burgerToggler">
               <span></span>
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <nav class="header__menu">
+            <nav class="header__menu" id="navigation">
+              <button class="btn btn-close" id="btnClose">X</button>
               <ul class="menu__list">
-                <li class="menu__item menu__link-active">Home</li>
+                <li class="menu__item">
+                  <a class="menu__link menu__link-active" href="#">Home</a>
+                </li>
                 <li class="menu__item">
                   <a class="menu__link" href="#about-us">About us</a>
                 </li>
@@ -257,4 +261,5 @@
       </footer>
     </div>
   </body>
+  <script src="./src/main.js"></script>
 </html>
