@@ -15,6 +15,10 @@
     width: 28.1rem;
     padding-bottom: 1.8rem;
   }
+
+  &-blur {
+    filter: blur(0.5rem);
+  }
 }
 
 .card__title {

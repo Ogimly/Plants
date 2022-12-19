@@ -71,3 +71,8 @@
   color: inherit;
   font-weight: 700;
 }
+
+.btn-active {
+  color: $color-background;
+  background-color: $color-accent;
+}

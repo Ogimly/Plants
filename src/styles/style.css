@@ -1221,6 +1221,11 @@ html {
   font-weight: 700;
 }
 
+.btn-active {
+  color: #ffffff;
+  background-color: #e06733;
+}
+
 .card {
   gap: 1rem;
   width: 32.9rem;
@@ -1236,6 +1241,9 @@ html {
     width: 28.1rem;
     padding-bottom: 1.8rem;
   }
+}
+.card-blur {
+  filter: blur(0.5rem);
 }
 
 .card__title {

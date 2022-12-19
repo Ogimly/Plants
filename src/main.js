@@ -1,9 +1,74 @@
-window.onload = function () {
+window.onload = () => {
+  // services
+  addServicesHandler();
+
   // prices
   addPricesHandler();
 
   // burger-menu
   addBurgerMenuHandler();
+};
+
+// services
+const addServicesHandler = () => {
+  const btnServicePanel = document.querySelector("#btnServicePanel");
+  const cards = document.querySelector("#cards");
+  let listCards = [];
+  if (cards) {
+    listCards = Array.from(cards.querySelectorAll(".card")).map((card) => ({
+      card,
+      service: card.dataset.service,
+    }));
+  }
+  const listServices = [];
+
+  const setBlur = () => {
+    const selectedServices = [];
+    listServices.forEach(({ selected, service }) => {
+      if (selected) selectedServices.push(service);
+    });
+
+    if (selectedServices.length === 0) {
+      listCards.forEach(({ card }) => card.classList.remove("card-blur"));
+    } else {
+      listCards.forEach(({ card, service }) => {
+        if (selectedServices.includes(service)) {
+          card.classList.remove("card-blur");
+        } else {
+          card.classList.add("card-blur");
+        }
+      });
+    }
+  };
+
+  const toggleService = (event) => {
+    const currentBtn = event.currentTarget;
+
+    let currentService;
+    let selected = 0;
+
+    listServices.forEach((el) => {
+      if (el.btn === currentBtn) currentService = el;
+      selected += el.selected ? 1 : 0;
+    });
+
+    if (selected > 1 && !currentService.selected) return;
+
+    currentBtn.classList.toggle("btn-active");
+    currentService.selected = !currentService.selected;
+
+    setBlur();
+  };
+
+  if (btnServicePanel) {
+    const listBtn = btnServicePanel.querySelectorAll(".btn");
+
+    if (listBtn.length > 0)
+      listBtn.forEach((btn) => {
+        btn.addEventListener("click", toggleService);
+        listServices.push({ btn, selected: false, service: btn.textContent });
+      });
+  }
 };
 
 // prices
