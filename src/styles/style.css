@@ -1099,15 +1099,18 @@ html {
 }
 @media (max-width: 1200px) {
   .contacts__image {
-    margin: 1rem 0 0 2rem;
+    margin-left: 2rem;
     height: 24.9rem;
   }
 }
 @media (max-width: 680px) {
   .contacts__image {
-    margin: 13.4rem 0 0 0;
+    margin-left: 0;
     height: 12.4rem;
   }
+}
+.contacts__image-hidden {
+  background-image: none;
 }
 
 .contacts__title {
@@ -1126,32 +1129,43 @@ html {
 .contacts__select {
   position: relative;
   gap: 4.7rem;
-  padding-top: 9.4rem;
+  padding: 9.4rem 0;
   margin-left: -4rem;
 }
 @media (max-width: 1200px) {
   .contacts__select {
     gap: 2.7rem;
     padding-top: 9.8rem;
+    padding-bottom: 24.8rem;
     margin-left: 0;
   }
 }
 @media (max-width: 680px) {
   .contacts__select {
     padding-top: 8.2rem;
+    padding-bottom: 13.2rem;
   }
 }
 
 .contacts__city-card {
+  position: absolute;
+  top: 19rem;
+  left: 0;
   width: 45rem;
+  opacity: 0;
   padding: 3.2rem;
   background: #edf2ec;
   border: 1px solid #000000;
   border-radius: 2rem;
-  opacity: 0;
+}
+@media (max-width: 1200px) {
+  .contacts__city-card {
+    top: 17rem;
+  }
 }
 @media (max-width: 680px) {
   .contacts__city-card {
+    top: 14.5rem;
     width: 30rem;
   }
 }

@@ -144,6 +144,8 @@ const addContactsHandler = () => {
   const options = selectCity.querySelector(".select__list-options");
   const title = selectCity.querySelector(".select__title");
   const cityCard = document.querySelector("#cityCard");
+  const contacts = document.querySelector("#contacts");
+  const image = contacts.querySelector(".contacts__image");
 
   const toggleSelect = (event) => {
     if (title && title.textContent === "City") {
@@ -186,6 +188,7 @@ const addContactsHandler = () => {
     if (title) title.textContent = selectedCity.city;
 
     cityCard.classList.add("contacts__city-card-show");
+    if (image) image.classList.add("contacts__image-hidden");
 
     toggleSelect(event);
   };
