@@ -27,11 +27,19 @@
   background-color: $color-arrow;
   border-radius: 50%;
   @extend %transition;
+
+  &-accent {
+    background-color: $color-arrow-accent;
+  }
 }
 
-.icon-arrow-closed {
+.arrow {
   width: 0.6rem;
   height: 0.6rem;
   @extend %background-image-properties;
   background-image: url("../images/icons/arrow-closed.svg");
+}
+
+.arrow-open {
+  background-image: url("../images/icons/arrow-open.svg");
 }

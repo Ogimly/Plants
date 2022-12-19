@@ -319,7 +319,7 @@ html {
   box-sizing: border-box;
 }
 
-.select, .icon-arrow, .price-item, .card, .btn, .footer__link, .menu__link, .burger span, .burger {
+.select, .icon-arrow, .dropdown__title::before, .price-item, .card, .btn, .footer__link, .menu__link, .burger span, .burger {
   transition: all 0.3s ease-out;
 }
 
@@ -335,7 +335,7 @@ html {
   width: 100%;
 }
 
-.icon-arrow-closed, .icon, .card__image, .contacts__image, .price__image, .about__image, .welcome__image {
+.arrow, .icon, .card__image, .contacts__image, .price__image, .about__image, .welcome__image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -357,7 +357,7 @@ html {
   justify-content: space-between;
 }
 
-.price-list, .price__content {
+.price-item, .price-list, .price__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -371,7 +371,7 @@ html {
   justify-content: space-between;
 }
 
-.price-item, .service__btn-panel, .service__content, .about, .socials, .github, .footer, .menu__list, .header {
+.price-item__caption, .service__btn-panel, .service__content, .about, .socials, .github, .footer, .menu__list, .header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -417,7 +417,7 @@ html {
   line-height: 4.8rem;
 }
 
-.price-item__title, .card__title {
+.price-item__title, .card__title, .btn-no-border {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -455,6 +455,22 @@ html {
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.6rem;
+}
+
+.dropdown__title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.dropdown__price-per-hour {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 .app__header {
@@ -1186,13 +1202,22 @@ html {
   border-radius: 50%;
 }
 
+.btn-no-border {
+  font-size: 1.4rem;
+  color: #717171;
+  width: 8.6rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+
 .btn-bold {
   font-weight: 700;
 }
 
 .btn-link {
   text-decoration: none;
-  color: #e06733;
+  color: inherit;
   font-weight: 700;
 }
 
@@ -1319,8 +1344,18 @@ html {
 .price-item:hover .icon-arrow {
   background-color: #aea1a1;
 }
-.price-item:hover .icon-arrow .icon-arrow-closed {
+.price-item:hover .icon-arrow .arrow {
   background-image: url("../images/icons/arrow-closed-active.svg");
+}
+.price-item:hover .icon-arrow .arrow-open {
+  background-image: url("../images/icons/arrow-open.svg");
+}
+.price-item-open {
+  background-color: #d6e7d2;
+}
+
+.price-item__caption {
+  width: 17rem;
 }
 
 .price-item__title {
@@ -1331,6 +1366,44 @@ html {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+}
+
+.price-item__dropdown {
+  width: 16rem;
+  display: none;
+}
+
+.dropdown-open {
+  display: block;
+}
+
+.dropdown__title {
+  position: relative;
+  color: #717171;
+  margin: 0;
+  padding-top: 1.2rem;
+}
+.dropdown__title::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #aea1a1;
+  left: 0;
+  top: 0.6rem;
+}
+
+.dropdown__price-per-hour {
+  color: #000000;
+  margin: 0;
+  padding: 0.6rem 0;
+}
+
+.dropdown__price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e06733;
 }
 
 .icon {
@@ -1360,11 +1433,18 @@ html {
   background-color: #d9d9d9;
   border-radius: 50%;
 }
+.icon-arrow-accent {
+  background-color: #aea1a1;
+}
 
-.icon-arrow-closed {
+.arrow {
   width: 0.6rem;
   height: 0.6rem;
   background-image: url("../images/icons/arrow-closed.svg");
+}
+
+.arrow-open {
+  background-image: url("../images/icons/arrow-open.svg");
 }
 
 .select {

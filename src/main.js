@@ -1,10 +1,56 @@
 window.onload = function () {
-  console.log("go!");
+  // prices
+  addPricesHandler();
 
   // burger-menu
   addBurgerMenuHandler();
 };
 
+// prices
+const addPricesHandler = () => {
+  const priceItems = document.querySelectorAll(".price-item");
+
+  const togglePriceItem = (event) => {
+    const target = event.target;
+    if (target.tagName === "BUTTON" || target.tagName === "A") return;
+
+    const priceItem = event.currentTarget;
+
+    if (priceItem) {
+      priceItem.classList.toggle("price-item-open");
+
+      const dropdown = priceItem.querySelector(".price-item__dropdown");
+      if (dropdown) dropdown.classList.toggle("dropdown-open");
+
+      const iconArrow = priceItem.querySelector(".icon-arrow");
+      if (iconArrow) iconArrow.classList.toggle("icon-arrow-accent");
+
+      const icon = priceItem.querySelector(".arrow");
+      if (icon) icon.classList.toggle("arrow-open");
+    }
+
+    if (priceItems.length > 0)
+      priceItems.forEach((currentItem) => {
+        if (priceItem !== currentItem) {
+          currentItem.classList.remove("price-item-open");
+
+          const dropdown = currentItem.querySelector(".price-item__dropdown");
+          if (dropdown) dropdown.classList.remove("dropdown-open");
+
+          const iconArrow = currentItem.querySelector(".icon-arrow");
+          if (iconArrow) iconArrow.classList.remove("icon-arrow-accent");
+
+          const icon = currentItem.querySelector(".arrow");
+          if (icon) icon.classList.remove("arrow-open");
+        }
+      });
+  };
+
+  if (priceItems.length > 0)
+    priceItems.forEach((el) => el.addEventListener("click", togglePriceItem));
+};
+
+// burger-menu
 const addBurgerMenuHandler = () => {
   const burgerToggler = document.querySelector("#burgerToggler");
   const navigation = document.querySelector("#navigation");
