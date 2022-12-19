@@ -19,6 +19,13 @@
 
   @extend %transition;
 
+  @include media-s {
+    width: 30rem;
+
+    background-position: calc(100% - 2.7rem) calc(100% - 2rem),
+      calc(100% - 2.2rem) calc(100% - 1.5rem);
+  }
+
   &:hover {
     border: 1px solid $color-background-hover;
     box-shadow: 0 0;

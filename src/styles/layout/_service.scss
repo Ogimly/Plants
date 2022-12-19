@@ -4,6 +4,10 @@
   @include media-xxl {
     padding: 6rem $padding-x-m 7rem $padding-x-m;
   }
+
+  @include media-s {
+    padding: 3rem $padding-x-s 2.8rem $padding-x-s;
+  }
 }
 
 .service__image-wrapper,
@@ -25,6 +29,12 @@
     align-items: flex-start;
     padding-bottom: 4rem;
   }
+
+  @include media-s {
+    padding: 0 0 8rem 0;
+    gap: 3.8rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .service__title {
@@ -34,15 +44,27 @@
   padding: 0;
   max-width: 31rem;
 
-  @include media-m {
+  @include media-l {
     font-size: 3.5rem;
     line-height: 4.6rem;
+  }
+
+  @include media-s {
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    padding-right: 10rem;
   }
 }
 
 .service__btn-panel {
   @extend %flex-row-center-between;
   gap: 3.8rem;
+
+  @include media-s {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 .service__grid-wrapper {
@@ -50,6 +72,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 11.6rem;
   grid-row-gap: 5.4rem;
+  justify-items: center;
 
   @include media-xxl {
     grid-column-gap: 2rem;
@@ -59,5 +82,14 @@
   @include media-l {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 10.6rem;
+  }
+
+  @include media-m {
+    grid-column-gap: 2rem;
+  }
+
+  @include media-s {
+    grid-template-columns: 1fr;
+    grid-row-gap: 3.4rem;
   }
 }

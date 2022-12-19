@@ -18,16 +18,20 @@
     padding: 2.8rem $padding-x-m;
   }
 
-  @include media-m {
+  @include media-l {
     flex-direction: column;
     gap: 0.6rem;
+  }
+
+  @include media-s {
+    padding: 1.6rem $padding-x-s;
   }
 }
 
 .footer__item {
   width: calc(100% / 3);
 
-  @include media-m {
+  @include media-l {
     width: 100%;
   }
 }
@@ -52,7 +56,7 @@
   justify-content: flex-start;
   gap: 2rem;
 
-  @include media-m {
+  @include media-l {
     justify-content: center;
   }
 }
@@ -66,8 +70,12 @@
   justify-content: flex-end;
   gap: 2rem;
 
-  @include media-m {
+  @include media-l {
     justify-content: center;
     padding-top: 1.2rem;
+  }
+
+  @include media-s {
+    padding-top: 0;
   }
 }

@@ -11,12 +11,28 @@
     flex-direction: row-reverse;
     gap: 0;
   }
+
+  @include media-s {
+    padding: 0 $padding-x-s 2.5rem $padding-x-s;
+  }
 }
 
 .welcome__image-wrapper,
 .welcome__content-wrapper {
   @extend %width-50;
   @extend %flex-centering;
+}
+
+.welcome__image-wrapper {
+  @include media-s {
+    display: none;
+  }
+}
+
+.welcome__content-wrapper {
+  @include media-s {
+    width: 100%;
+  }
 }
 
 .welcome__image {
@@ -44,6 +60,11 @@
     margin-right: -1rem;
     padding-top: 2.2rem;
   }
+
+  @include media-s {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
 }
 
 .welcome__description {
@@ -56,5 +77,9 @@
     font-size: 1.6rem;
     line-height: 2.5rem;
     padding: 3rem 0 3.6rem 0.4rem;
+  }
+
+  @include media-s {
+    padding: 2rem 0 2.6rem 0rem;
   }
 }

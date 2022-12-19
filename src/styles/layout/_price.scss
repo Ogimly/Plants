@@ -5,11 +5,20 @@
   @include media-xxl {
     padding: 4rem $padding-x-m 9rem $padding-x-m;
   }
+
+  @include media-s {
+    flex-direction: column;
+    padding: 2.5rem $padding-x-s 4rem $padding-x-s;
+  }
 }
 
 .price__content-wrapper,
 .price__contact-wrapper {
   @extend %width-50;
+
+  @include media-s {
+    width: 100%;
+  }
 }
 
 .price__title {
@@ -17,21 +26,35 @@
   color: $color-gray-xl;
   margin: 0;
 
-  @include media-m {
+  @include media-l {
     font-size: 3.5rem;
     line-height: 4.2rem;
+  }
+
+  @include media-s {
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 
 .price__content {
   @extend %flex-column-start-between;
 
+  @include media-s {
+    align-items: center;
+  }
+
   .price__title {
     padding-bottom: 6rem;
 
-    @include media-m {
+    @include media-l {
       padding-left: 1.5rem;
       padding-bottom: 5.8rem;
+    }
+
+    @include media-s {
+      padding-left: 0;
+      padding-bottom: 3.6rem;
     }
   }
 }
@@ -40,14 +63,23 @@
   padding: 3.2rem 4rem;
   border: 1px solid $color-border;
   border-radius: 2rem;
+
+  @include media-s {
+    padding: 2.8rem 2rem;
+  }
 }
 
 .price__contact {
   @extend %flex-column-end-between;
   gap: 4.2rem;
 
-  @include media-m {
+  @include media-l {
     gap: 3rem;
+  }
+
+  @include media-s {
+    align-items: center;
+    gap: 0;
   }
 
   .price__title {
@@ -59,12 +91,22 @@
       line-height: 3.5rem;
       padding: 10rem 0 0 5rem;
     }
+
+    @include media-s {
+      text-align: center;
+      font-size: 2rem;
+      padding: 2rem 4rem;
+    }
   }
 }
 
 .price__image-wrapper {
   @extend %flex-centering;
   @extend %width-100;
+
+  @include media-s {
+    display: none;
+  }
 }
 
 .price__image {

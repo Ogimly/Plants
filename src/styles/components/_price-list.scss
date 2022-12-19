@@ -1,6 +1,10 @@
 .price-list {
   @extend %flex-column-start-between;
   gap: 3rem;
+
+  @include media-s {
+    gap: 1.4rem;
+  }
 }
 
 .price-item {
@@ -11,6 +15,11 @@
   padding: 1.6rem 4rem;
   cursor: pointer;
   @extend %transition;
+
+  @include media-s {
+    width: 18rem;
+    padding: 1.6rem 4rem 1.4rem 3rem;
+  }
 
   &:hover {
     background-color: $color-background-hover;
@@ -28,4 +37,9 @@
 .price-item__title {
   @extend %text-card-title;
   margin: 0;
+
+  @include media-s {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }

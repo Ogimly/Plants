@@ -9,6 +9,10 @@
   @include media-xl {
     flex-direction: column;
   }
+
+  @include media-s {
+    padding: 2.5rem $padding-x-s 0 $padding-x-s;
+  }
 }
 
 .contacts__image-wrapper,
@@ -37,14 +41,25 @@
     margin: 25rem 0 0 2rem;
     height: 24.9rem;
   }
+
+  @include media-s {
+    margin: 13.4rem 0 0 0;
+    height: 12.4rem;
+  }
 }
 
 .contacts__title {
   @extend %text-h2-inika;
   font-weight: 700;
-  color: $color-accent;
+  color: $color-primary;
   margin: 0;
   padding-top: 0.5rem;
+
+  @include media-s {
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    padding-top: 0;
+  }
 }
 
 .contacts__select {
@@ -54,5 +69,9 @@
   @include media-xl {
     padding-top: 9.8rem;
     margin-left: 0;
+  }
+
+  @include media-s {
+    padding-top: 8.2rem;
   }
 }

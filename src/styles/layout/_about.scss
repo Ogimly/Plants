@@ -9,6 +9,10 @@
   @include media-l {
     flex-direction: column;
   }
+
+  @include media-s {
+    padding: 3rem $padding-x-s 2.8rem $padding-x-s;
+  }
 }
 
 .about__image-wrapper,
@@ -32,6 +36,10 @@
     height: 25.8rem;
     background-position: center;
   }
+
+  @include media-s {
+    height: 15.4rem;
+  }
 }
 
 .about__title {
@@ -46,6 +54,12 @@
     padding: 0 12rem;
     text-align: center;
   }
+
+  @include media-s {
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    padding: 0;
+  }
 }
 
 .about__description {
@@ -57,5 +71,11 @@
 
   @include media-l {
     padding: 5rem 0 7rem 0;
+  }
+
+  @include media-s {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 1.2rem 0 0 0;
   }
 }

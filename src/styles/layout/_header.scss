@@ -16,6 +16,10 @@
   @include media-xxl {
     padding: 3.5rem calc($padding-x-m + 2px);
   }
+
+  @include media-s {
+    padding: 2.5rem $padding-x-s;
+  }
 }
 
 .logo__text {
@@ -28,6 +32,14 @@
   list-style: none;
   padding-inline-start: 0;
   margin: 0;
+
+  @include media-m {
+    gap: 2rem;
+  }
+
+  @include media-s {
+    display: none;
+  }
 }
 
 .menu__link {
