@@ -49,7 +49,9 @@
   }
 
   &-hidden {
-    background-image: none;
+    @include media-s {
+      background-image: none;
+    }
   }
 }
 

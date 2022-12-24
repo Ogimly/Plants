@@ -474,10 +474,6 @@ html {
   background-color: #edf2ec;
 }
 
-.header__wrapper {
-  margin: 0 auto;
-}
-
 .header {
   padding: 4.2rem 11rem;
 }
@@ -602,10 +598,6 @@ html {
 .app__footer {
   color: #000000;
   background-color: #ffffff;
-}
-
-.footer__wrapper {
-  margin: 0 auto;
 }
 
 .footer {
@@ -1109,8 +1101,10 @@ html {
     height: 12.4rem;
   }
 }
-.contacts__image-hidden {
-  background-image: none;
+@media (max-width: 680px) {
+  .contacts__image-hidden {
+    background-image: none;
+  }
 }
 
 .contacts__title {
@@ -1584,9 +1578,6 @@ html {
 
 .app__container {
   max-width: 144rem;
-}
-
-.main__wrapper {
   margin: 0 auto;
 }
 

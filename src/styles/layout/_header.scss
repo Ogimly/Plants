@@ -5,10 +5,6 @@
   @extend %width-100;
 }
 
-.header__wrapper {
-  margin: 0 auto;
-}
-
 .header {
   @extend %flex-row-center-between;
   padding: 4.2rem $padding-x;

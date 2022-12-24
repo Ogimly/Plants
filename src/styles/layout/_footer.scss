@@ -5,10 +5,6 @@
   @extend %width-100;
 }
 
-.footer__wrapper {
-  margin: 0 auto;
-}
-
 .footer {
   @extend %flex-row-center-between;
   gap: 3rem;

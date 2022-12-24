@@ -8,14 +8,11 @@
 
 .app__container {
   max-width: $width-project;
+  margin: 0 auto;
 }
 
 .app__main {
   @extend %width-100;
-}
-
-.main__wrapper {
-  margin: 0 auto;
 }
 
 .section {
