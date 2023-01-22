@@ -389,7 +389,7 @@ html {
   justify-content: space-between;
 }
 
-.app__header {
+.popup, .app__header {
   font-family: "Inika", serif;
   font-style: normal;
   font-weight: 400;
@@ -437,7 +437,7 @@ html {
   line-height: 3.5rem;
 }
 
-.city-card__grid, .list-options, .card__description, .btn-close, .btn-primary {
+.city-card__grid, .list-options, .card__description, .btn-primary {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -472,6 +472,7 @@ html {
 .app__header {
   color: #010201;
   background-color: #edf2ec;
+  z-index: 15;
 }
 
 .header {
@@ -511,32 +512,35 @@ html {
   }
 }
 
-.header__menu .btn {
-  display: none;
+.header__menu {
+  display: block;
 }
 @media (max-width: 380px) {
   .header__menu {
-    position: fixed;
-    top: 0;
-    right: -20rem;
-    background-color: #edf2ec;
-    padding: 4.5rem 4.5rem 2.4rem 4.5rem;
-    border-radius: 0 0 0 2rem;
-    box-shadow: 0px 0px 2rem 1rem rgba(13, 13, 13, 0.1);
-    transition: all 0.3s ease-out;
+    display: none;
   }
-  .header__menu .btn {
+}
+
+.popup {
+  display: none;
+}
+@media (max-width: 380px) {
+  .popup {
     display: block;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: -21.5rem;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #d6e7d2;
+    padding: 3.2rem 0;
+    transition: all 0.5s ease-out;
   }
 }
 
 @media (max-width: 380px) {
-  .header__menu-open {
-    right: 0;
-    z-index: 10;
+  .popup-open {
+    top: 8.3rem;
   }
 }
 
@@ -562,7 +566,6 @@ html {
 @media (max-width: 380px) {
   .menu__list {
     flex-direction: column;
-    align-items: flex-start;
     gap: 0;
   }
   .menu__list .menu__link-active {
@@ -579,20 +582,21 @@ html {
 }
 
 .blackout {
-  position: fixed;
+  position: absolute;
   width: 100%;
-  height: 0%;
-  top: 0;
+  height: 100%;
+  top: 8.3rem;
   right: 0;
-  z-index: 5;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.2549019608);
+  background: rgba(0, 0, 0, 0.1921568627);
+  z-index: -5;
   opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transition: all 0.3s ease-out 0.3s;
 }
 .blackout__active {
-  height: 100%;
+  z-index: 5;
   opacity: 1;
+  transition-delay: 0s;
 }
 
 .app__footer {
@@ -1217,15 +1221,6 @@ html {
     height: 2.6rem;
     font-size: 1rem;
   }
-}
-
-.btn-close {
-  color: #010201;
-  background-color: #d6e7d2;
-  width: 3.2rem;
-  height: 3.2rem;
-  border: none;
-  border-radius: 50%;
 }
 
 .btn-no-border {

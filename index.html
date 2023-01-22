@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./src/images/logo.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +17,7 @@
   <body>
     <div class="blackout" id="blackout"></div>
     <div class="app">
-      <header class="app__header">
+      <header class="app__header" id="header">
         <div class="app__container">
           <div class="header">
             <div class="header__logo">
@@ -29,9 +30,8 @@
               <span></span>
               <span></span>
             </div>
-            <nav class="header__menu" id="navigation">
-              <button class="btn btn-close" id="btnClose">X</button>
-              <ul class="menu__list">
+            <nav class="header__menu">
+              <ul class="menu__list" id="navigation">
                 <li class="menu__item">
                   <a class="menu__link menu__link-active" href="#">Home</a>
                 </li>
@@ -52,6 +52,7 @@
           </div>
         </div>
       </header>
+      <div class="popup" id="popup"></div>
       <main class="app__main">
         <section class="section-accent" id="welcome">
           <div class="app__container">

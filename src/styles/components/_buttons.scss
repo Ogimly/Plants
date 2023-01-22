@@ -55,16 +55,6 @@
   }
 }
 
-.btn-close {
-  @extend %text-card;
-  color: $color-gray-l;
-  background-color: $color-background-hover;
-  width: 3.2rem;
-  height: 3.2rem;
-  border: none;
-  border-radius: 50%;
-}
-
 .btn-no-border {
   @extend %text-card-title;
   font-size: 1.4rem;
